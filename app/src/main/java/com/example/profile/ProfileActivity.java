@@ -1,7 +1,9 @@
 package com.example.profile;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.Nullable;
@@ -28,5 +30,12 @@ public class ProfileActivity extends AppCompatActivity {
         fullNameText.setText("Full Name: " + firstName + " " + lastName);
         ageText.setText("Age: " + age);
         bioText.setText("Bio: " + bio);
+
+        Button openCalculatorBtn = findViewById(R.id.openCalculatorBtn);
+
+        openCalculatorBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(ProfileActivity.this, CalculatorActivity.class);
+            startActivity(intent);
+        });
     }
 }

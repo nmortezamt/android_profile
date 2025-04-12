@@ -29,5 +29,17 @@
             android:layout_width="match_parent"
             android:textSize="24sp"
             android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"/>
+        <Button
+            android:id="@+id/openCalculatorBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open Calculator"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,13 +19,24 @@ public class ProfileActivity extends AppCompatActivity {
         fullNameText = findViewById(R.id.fullNameText);
         ageText = findViewById(R.id.ageText);
         bioText = findViewById(R.id.bioText);
+        Button logoutButton = findViewById(R.id.logoutButton);
+        logoutButton.setOnClickListener(view -> {
+            SharedPreferences prefs = getSharedPreferences("UserProfile", MODE_PRIVATE);
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.clear(); // This removes all data
+            editor.apply();
 
-        SharedPreferences prefs = getSharedPreferences("UserProfile", MODE_PRIVATE);
+            // Go back to MainActivity
+            Intent intent = new Intent(ProfileActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish(); // Finish ProfileActivity so it can't be returned to
+        });
 
-        String firstName = prefs.getString("firstName", "");
-        String lastName = prefs.getString("lastName", "");
-        String age = prefs.getString("age", "");
-        String bio = prefs.getString("bio", "");
+        Intent intent = getIntent();
+        String firstName = intent.getStringExtra("firstName");
+        String lastName = intent.getStringExtra("lastName");
+        String age = intent.getStringExtra("age");
+        String bio = intent.getStringExtra("bio");
 
         fullNameText.setText("Full Name: " + firstName + " " + lastName);
         ageText.setText("Age: " + age);
@@ -34,8 +45,8 @@ public class ProfileActivity extends AppCompatActivity {
         Button openCalculatorBtn = findViewById(R.id.openCalculatorBtn);
 
         openCalculatorBtn.setOnClickListener(v -> {
-            Intent intent = new Intent(ProfileActivity.this, CalculatorActivity.class);
-            startActivity(intent);
+            Intent calcIntent  = new Intent(ProfileActivity.this, CalculatorActivity.class);
+            startActivity(calcIntent);
         });
     }
 }

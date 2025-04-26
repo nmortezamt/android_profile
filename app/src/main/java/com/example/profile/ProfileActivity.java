@@ -37,10 +37,11 @@ public class ProfileActivity extends AppCompatActivity {
         String lastName = intent.getStringExtra("lastName");
         String age = intent.getStringExtra("age");
         String bio = intent.getStringExtra("bio");
+        UserData userData = new UserData(firstName, lastName, age, bio);
 
-        fullNameText.setText("Full Name: " + firstName + " " + lastName);
-        ageText.setText("Age: " + age);
-        bioText.setText("Bio: " + bio);
+        fullNameText.setText("Full Name: " + userData.getFullName());
+        ageText.setText("Age: " + userData.getAge());
+        bioText.setText("Bio: " + userData.getBio());
 
         Button openCalculatorBtn = findViewById(R.id.openCalculatorBtn);
 

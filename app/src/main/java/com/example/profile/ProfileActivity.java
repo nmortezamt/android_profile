@@ -49,5 +49,11 @@ public class ProfileActivity extends AppCompatActivity {
             Intent calcIntent  = new Intent(ProfileActivity.this, CalculatorActivity.class);
             startActivity(calcIntent);
         });
+
+        Button splashBtn = findViewById(R.id.splashButton);
+        splashBtn.setOnClickListener(v -> {
+            Intent splashIntent  = new Intent(ProfileActivity.this, SplashActivity.class);
+            startActivity(splashIntent);
+        });
     }
 }

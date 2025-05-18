@@ -17,6 +17,7 @@
         <activity android:name=".SplashActivity" />
         <activity android:name=".OperatorActivity" />
         <activity android:name=".MathActivity" />
+        <activity android:name=".RecyclerViewActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

@@ -48,6 +48,12 @@
             android:text="splash"
             android:layout_marginTop="20dp" />
         <Button
+            android:id="@+id/RecyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_list"
+            android:layout_marginTop="20dp" />
+        <Button
             android:id="@+id/logoutButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

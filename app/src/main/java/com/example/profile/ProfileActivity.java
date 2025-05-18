@@ -55,5 +55,10 @@ public class ProfileActivity extends AppCompatActivity {
             Intent splashIntent  = new Intent(ProfileActivity.this, SplashActivity.class);
             startActivity(splashIntent);
         });
+        Button RecyclerViewBtn = findViewById(R.id.RecyclerView);
+        RecyclerViewBtn.setOnClickListener(v -> {
+            Intent RecyclerRecyclerViewiewIntent  = new Intent(ProfileActivity.this, RecyclerViewActivity.class);
+            startActivity(RecyclerRecyclerViewiewIntent);
+        });
     }
 }

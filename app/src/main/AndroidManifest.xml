@@ -18,6 +18,11 @@
         <activity android:name=".OperatorActivity" />
         <activity android:name=".MathActivity" />
         <activity android:name=".RecyclerViewActivity" />
+        <activity android:name=".exam.MainActivity" />
+        <activity android:name=".exam.Exam1Activity" />
+        <activity android:name=".exam.Exam2Activity" />
+        <activity android:name=".exam.Exam3Activity" />
+        <activity android:name=".exam.Exam4Activity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

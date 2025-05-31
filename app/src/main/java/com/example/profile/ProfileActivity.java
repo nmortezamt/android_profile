@@ -20,6 +20,11 @@ public class ProfileActivity extends AppCompatActivity {
         ageText = findViewById(R.id.ageText);
         bioText = findViewById(R.id.bioText);
         Button logoutButton = findViewById(R.id.logoutButton);
+        Button exam = findViewById(R.id.exam);
+        exam.setOnClickListener(v -> {
+            Intent examIntent = new Intent(this, com.example.profile.exam.MainActivity.class);
+            startActivity(examIntent);
+        });
         logoutButton.setOnClickListener(view -> {
             SharedPreferences prefs = getSharedPreferences("UserProfile", MODE_PRIVATE);
             SharedPreferences.Editor editor = prefs.edit();

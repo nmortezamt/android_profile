@@ -14,36 +14,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <EditText
-            android:id="@+id/firstNameInput"
-            android:hint="First Name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-        <EditText
-            android:id="@+id/lastNameInput"
-            android:hint="Last Name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-        <EditText
-            android:id="@+id/ageInput"
-            android:hint="Age"
-            android:inputType="number"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-        <EditText
-            android:id="@+id/bioInput"
-            android:hint="Bio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
         <Button
-            android:id="@+id/saveBtn"
-            android:text="Save View Profile"
+            android:id="@+id/btnTaskOne"
+            android:text="T_SharedPreference"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
+
 
     </LinearLayout>
 

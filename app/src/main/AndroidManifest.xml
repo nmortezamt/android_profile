@@ -10,14 +10,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Profile"
+        android:theme="@style/Theme.V2"
         tools:targetApi="31">
-        <activity android:name=".ProfileActivity" android:exported="true"/>
-        <activity android:name=".CalculatorActivity" />
-        <activity android:name=".SplashActivity" />
-        <activity android:name=".OperatorActivity" />
-        <activity android:name=".MathActivity" />
-        <activity android:name=".RecyclerViewActivity" />
+        <activity android:name=".tasks.userinfo.UserInfoActivity" />
+        <activity android:name=".tasks.userinfo.DisplayUserInfoActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

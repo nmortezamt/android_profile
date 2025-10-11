@@ -1,4 +1,4 @@
-package com.example.profile;
+package com.example.v2;
 
 import org.junit.Test;
 

@@ -1,5 +1,6 @@
 package com.example.v2.tasks.userinfo;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -7,34 +8,41 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.v2.R;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class DisplayUserInfoActivity extends AppCompatActivity {
 
-    TextView tvName, tvEmail, tvAge;
+
+    RecyclerView recyclerView;
+    UserInfoAdapter adapter;
+    List<UserItem> userItemList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_user_info);
 
+        recyclerView = findViewById(R.id.recyclerViewUserInfo);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        tvName = findViewById(R.id.tvName);
-        tvEmail = findViewById(R.id.tvEmail);
-        tvAge = findViewById(R.id.tvAge);
+        Intent intent = getIntent();
+        String name = intent.getStringExtra("name");
+        String email = intent.getStringExtra("email");
+        String age = intent.getStringExtra("age");
 
-        String name = getIntent().getStringExtra("name");
-        String email = getIntent().getStringExtra("email");
-        String age = getIntent().getStringExtra("age");
+        userItemList = new ArrayList<>();
+        userItemList.add(new UserItem("Name", name));
+        userItemList.add(new UserItem("Email", email));
+        userItemList.add(new UserItem("Age", age));
 
-        tvName.setText("Name: " + name);
-        tvEmail.setText("Email: " + email);
-        tvAge.setText("Age: " + age);
-
-        tvName.setOnClickListener(v -> saveToSharedPref("name", name));
-        tvEmail.setOnClickListener(v -> saveToSharedPref("email", email));
-        tvAge.setOnClickListener(v -> saveToSharedPref("age", age));
+        adapter = new UserInfoAdapter(this, userItemList);
+        recyclerView.setAdapter(adapter);
     }
 
     private void saveToSharedPref(String key, String value) {

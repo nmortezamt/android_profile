@@ -44,13 +44,4 @@ public class DisplayUserInfoActivity extends AppCompatActivity {
         adapter = new UserInfoAdapter(this, userItemList);
         recyclerView.setAdapter(adapter);
     }
-
-    private void saveToSharedPref(String key, String value) {
-        SharedPreferences prefs = getSharedPreferences("UserPrefs", MODE_PRIVATE);
-        SharedPreferences.Editor editor = prefs.edit();
-        editor.putString(key, value);
-        editor.apply();
-
-        Toast.makeText(this, key + " saved!", Toast.LENGTH_SHORT).show();
-    }
 }

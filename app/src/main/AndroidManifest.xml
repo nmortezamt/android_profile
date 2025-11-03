@@ -14,6 +14,7 @@
         tools:targetApi="31">
         <activity android:name=".tasks.userinfo.UserInfoActivity" />
         <activity android:name=".tasks.userinfo.DisplayUserInfoActivity" />
+        <activity android:name=".tasks.dialog.DialogActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

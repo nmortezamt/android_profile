@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -15,6 +17,7 @@
         <activity android:name=".tasks.userinfo.UserInfoActivity" />
         <activity android:name=".tasks.userinfo.DisplayUserInfoActivity" />
         <activity android:name=".tasks.dialog.DialogActivity" />
+        <activity android:name=".tasks.broadcast.ConnectionStatusActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

@@ -8,10 +8,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.v2.tasks.broadcast.ConnectionStatusActivity;
 import com.example.v2.tasks.dialog.DialogActivity;
+import com.example.v2.tasks.musicplayer.PlayListActivity;
 import com.example.v2.tasks.userinfo.UserInfoActivity;
 
 public class MainActivity extends AppCompatActivity {
-    Button btnTaskOne, btnTaskTwo, btnTaskThree;
+    Button btnTaskOne, btnTaskTwo, btnTaskThree, btnTaskFour;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         btnTaskOne = findViewById(R.id.btnTaskOne);
         btnTaskTwo = findViewById(R.id.btnTaskTwo);
         btnTaskThree = findViewById(R.id.btnTaskThree);
+        btnTaskFour = findViewById(R.id.btnTaskFour);
         btnTaskOne.setOnClickListener(v ->
                 startActivity(new Intent(this, UserInfoActivity.class))
         );
@@ -31,6 +33,10 @@ public class MainActivity extends AppCompatActivity {
 
         btnTaskThree.setOnClickListener(v ->
                 startActivity(new Intent(this, ConnectionStatusActivity.class))
+        );
+
+        btnTaskFour.setOnClickListener(v ->
+                startActivity(new Intent(this, PlayListActivity.class))
         );
 
 

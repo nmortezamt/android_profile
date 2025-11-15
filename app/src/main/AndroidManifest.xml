@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO"/>
 
     <application
         android:allowBackup="true"
@@ -18,6 +19,8 @@
         <activity android:name=".tasks.userinfo.DisplayUserInfoActivity" />
         <activity android:name=".tasks.dialog.DialogActivity" />
         <activity android:name=".tasks.broadcast.ConnectionStatusActivity" />
+        <activity android:name=".tasks.musicplayer.PlayerActivity" />
+        <activity android:name=".tasks.musicplayer.PlayListActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

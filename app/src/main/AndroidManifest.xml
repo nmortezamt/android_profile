@@ -21,6 +21,7 @@
         <activity android:name=".tasks.broadcast.ConnectionStatusActivity" />
         <activity android:name=".tasks.musicplayer.PlayerActivity" />
         <activity android:name=".tasks.musicplayer.PlayListActivity" />
+        <activity android:name=".tasks.database.UserRegistrationActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

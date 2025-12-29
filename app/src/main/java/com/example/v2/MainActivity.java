@@ -9,11 +9,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.v2.tasks.broadcast.ConnectionStatusActivity;
 import com.example.v2.tasks.database.UserRegistrationActivity;
 import com.example.v2.tasks.dialog.DialogActivity;
+import com.example.v2.tasks.guessword.GuessWordActivity;
 import com.example.v2.tasks.musicplayer.PlayListActivity;
 import com.example.v2.tasks.userinfo.UserInfoActivity;
 
 public class MainActivity extends AppCompatActivity {
-    Button btnTaskOne, btnTaskTwo, btnTaskThree, btnTaskFour, btnTaskFive;
+    Button btnTaskOne, btnTaskTwo, btnTaskThree, btnTaskFour, btnTaskFive, btnTaskSix;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         btnTaskThree = findViewById(R.id.btnTaskThree);
         btnTaskFour = findViewById(R.id.btnTaskFour);
         btnTaskFive = findViewById(R.id.btnTaskFive);
+        btnTaskSix = findViewById(R.id.btnTaskSix);
         btnTaskOne.setOnClickListener(v ->
                 startActivity(new Intent(this, UserInfoActivity.class))
         );
@@ -43,6 +45,10 @@ public class MainActivity extends AppCompatActivity {
 
         btnTaskFive.setOnClickListener(v ->
                 startActivity(new Intent(this, UserRegistrationActivity.class))
+        );
+
+        btnTaskSix.setOnClickListener(v ->
+                startActivity(new Intent(this, GuessWordActivity.class))
         );
 
 
